@@ -30,7 +30,7 @@ jobs:
 
       - uses: cachix/cachix-action@v12
         with:
-          name: ych-blockchain-packages
+          name: ych-nixos-config
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
       - name: Run the Magic Nix Cache
