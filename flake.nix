@@ -1,15 +1,13 @@
 {
-  description = "nix-blockchain-development";
+  description = "nixos-config";
 
   nixConfig = {
     extra-substituters = [
-      "https://ych-blockchain-packages.cachix.org"
-      "https://nix-blockchain-development.cachix.org"
+      "https://ych-nixos-config.cachix.org"
       "https://cache.iog.io"
     ];
     extra-trusted-public-keys = [
-      "ych-blockchain-packages.cachix.org-1:AsOOPaNjAT/LGE25rB/DTUIRwcltdaFG/Hl16ImD8r0="
-      "nix-blockchain-development.cachix.org-1:Ekei3RuW3Se+P/UIo6Q/oAgor/fVhFuuuX5jR8K/cdg="
+      "ych-nixos-config.cachix.org-1:BwBSlbK6GB1MEiyE5YvCejnn9kmLvFty9zm6r/24UX4="
       "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
     ];
   };
