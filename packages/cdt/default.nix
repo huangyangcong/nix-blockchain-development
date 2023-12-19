@@ -1,9 +1,9 @@
-{
-  clangStdenv,
-  nodejs,
-  fetchgit,
-  pkgs,
-  lib,
+{ clangStdenv
+, nodejs
+, fetchgit
+, pkgs
+, lib
+,
 }:
 clangStdenv.mkDerivation rec {
   name = "cdt";
@@ -21,7 +21,9 @@ clangStdenv.mkDerivation rec {
         enabledStatic = true;
       })
   ];
-  nativeBuildInputs = with pkgs; [pkgconfig cmake clang git python3];
+
+  dontFixCmake = true;
+  nativeBuildInputs = with pkgs; [ pkgconfig cmake clang git python3 ];
 
   src = fetchgit {
     url = "https://github.com/AntelopeIO/cdt";
